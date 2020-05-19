@@ -17,22 +17,22 @@ app.get('/', (req, res, next) => {
 // create a route for a client ('customer') to
 // write an order
 
-app.post('/order/:type/:number', (req, res, next) => {
-  console.log('order', req.params.type, req.params.number);
+app.post('/delivery/:vendor/:orderID', (req, res, next) => {
+  // console.log('order', req.params.vendor, req.params.orderID);
   let order = {
-    type: req.params.type,
-    number: req.params.number,
+    vendor: req.params.vendor,
+    orderID: req.params.orderID,
   };
 
-  if (!(order.type === 'drink' || order.type === 'food')) {
+  if (!(order.vendor === 'flower' || order.vendor === 'candy')) {
     res.status(400);
     res.send('Incorrect order type');
   } else {
-    socket.emit('order-created', order);
+    console.log('delivery', order);
+    socket.emit('delivered', order);
     res.status(200);
     res.send('Sent order to queue');
   }
-
   // i want to send this order to the queue
   // when the queue gets it, return a response
 });

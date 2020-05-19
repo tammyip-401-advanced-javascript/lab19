@@ -34,7 +34,7 @@ Do npm start in the terminal to start running each app:
 Press crtl + c to stop the app
 
 UML
-https://docs.google.com/spreadsheets/d/1BZd3AU8G_D2SGAzM8gxg7yy7N9Zedac-5CnOKQu8EKM/edit?usp=sharing
+https://docs.google.com/spreadsheets/d/1YiMTCgPyHVWjycqwzuej0lzvFLAcoFvVYz-f99x4sdg/edit?usp=sharing
 
 
 
