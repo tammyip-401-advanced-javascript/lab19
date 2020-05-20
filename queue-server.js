@@ -39,13 +39,13 @@ io.on('connection', (socket) => {
     // figure out is this from flower shop or candy shop
     socket.on('received-flower-order', (payload) => {
         // delete the item from the queue
-        queue.chef.shift();
+        queue.flower.shift();
         io.to('flower').emit('delivered', queue.flower);
     });
 
     socket.on('received-candy-order', (payload) => {
         // delete the item from the queue
-        queue.bar.shift();
+        queue.candy.shift();
         io.to('candy').emit('delivered', queue.candy);
     });
 });

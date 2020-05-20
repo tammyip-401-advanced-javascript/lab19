@@ -15,4 +15,4 @@ socket.on('delivered', (payload) => {
 
 setInterval(() => {
   if (candyOrders.length > 0) socket.emit('received-candy-order', candyOrders[0]);
-}, 5000);
+}, 3000);

@@ -15,4 +15,4 @@ socket.on('delivered', (payload) => {
 
 setInterval(() => {
   if (flowerOrders.length > 0) socket.emit('received-flower-order', flowerOrders[0]);
-}, 5000);
+}, 3000);
