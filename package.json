@@ -1,0 +1,24 @@
+{
+    "name": "lab19",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --verbose --coverage",
+        "start": "node index.js",
+        "start-dev": "nodemon index.js",
+        "start-queue": "node queue-server.js",
+        "start-api": "node api.js",
+        "start-vendor-01": "node vendor-01.js",
+        "start-vendor-02": "node vendor-02.js",
+        "lint": "eslint **/*.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^4.0.1",
+        "faker": "^4.1.0",
+        "nodemon": "^2.0.3",
+        "socket.io": "^2.3.0"
+    }
+}
